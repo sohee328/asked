@@ -1,0 +1,18 @@
+<html>
+    <head>
+        
+    </head>
+    <body style = "background-image: url(https://68.media.tumblr.com/422c929ee4510359a1e91170b16bd73f/tumblr_ny2kxtS6zU1tf8vylo1_1280.png)">
+
+        <p><h2><%= @question.id %>번 질문을 수정할 화면입니다.</h2></p>
+        <form action="/questions/update/<%= @question.id %>" method="post">
+        이름: <input type="text" name="input_title" value="<%= @question.title %>">
+        질문: <input type="text" name="input_content" value="<%= @question.content %>">
+        <button type="submit" class="btn btn-outline-warning">수정하기</button>
+</form>
+    </body>
+    
+</html>
+
+
+

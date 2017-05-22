@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Workspace</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  
+    <style>
+    @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    </style>
+  </head>
+  
+  <body>
+    <nav>
+      <div class="container">
+          <h1><a href="/">Asked</a></h1>
+      </div>
+    </nav>
+    <div id="wrap">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+          </div>
+          <div class="col-6">
+            <%= yield %>
+          </div>
+          <div class="col">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <footer>
+      <ul>
+        <li>
+          <a href="http://www.skhu.ac.kr">성공회 대학교</a>
+        </li>
+        <li class="footer-menu-divider"> &sdot; </li>
+        <li>
+          <a href="https://likelion.net">멋쟁이 사자처럼</a>
+        </li>
+      </ul>
+      <p class="copyright text-muted"> Copyright &copy; Sohee, 2017</p>
+    </footer>
+  </body>
+</html>
