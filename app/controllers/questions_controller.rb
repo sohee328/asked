@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-   
+  before_action :authenticate_user!
    #Create
     def new
     #사용자가 데이터를 입력할 화면

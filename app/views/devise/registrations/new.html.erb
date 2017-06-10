@@ -1,0 +1,33 @@
+<br>
+<center>
+<h2 style="color:#FFFF00">회원가입</h2>
+<div class="container">
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field", style="color:#808080">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+<br>
+  <div class="field", style="color:#808080">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(최소 <%= @minimum_password_length %>자)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+<br>
+  <div class="field", style="color:#808080">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+<br>
+  <div class="actions">
+    <button class="btn btn-outline-danger" type="submit">가입</button>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+ </div>
+</center>

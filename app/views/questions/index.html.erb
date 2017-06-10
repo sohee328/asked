@@ -1,9 +1,13 @@
-<body style = "background-image: url(https://68.media.tumblr.com/50a4ccc6f201ca23daa28207dd209a0a/tumblr_nyy7tiB3Rn1tf8vylo1_1280.png)">
-    <p><h2>지금까지 작성된 질문들 입니다.</h2></p>
+<body style="color:#FFFF00">
+    <p><h2>게시판</h2></p>
     
-    <p><h3><a href="/questions/new"><button type="button" class="btn btn-info">새 질문 작성하기</button></a></h3></p>
+    
+    <button class="btn btn-outline-warning" type="submit"><a href="/users/sign_out">로그아웃</a></button>
+    
+    
+    <p><h3><a href="/questions/new"><button type="button" class="btn btn-info">새 글 작성하기</button></a></h3></p>
     
     <%@questions.each do |q| %>
-       <h3><a href="/questions/show/<%= q.id %>"><%= q.id %> : <%= q.title %></a></h3>
+       <h3><a href="/questions/show/<%= q.id %>"><%= q.id %>번/ 작성자: <%= q.title %></a></h3>
     <% end %>
 </body>

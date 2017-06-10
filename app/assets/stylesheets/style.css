@@ -3,6 +3,9 @@ html, body{
     padding: 0;
     height: 95.2%;
     background-size: cover;
+    background-image: url(http://cfile1.uf.tistory.com/image/172D074E50AE51DD2685CB);
+    color: white;
+
 }
 
 nav{
@@ -35,4 +38,8 @@ ul{
 
 li{
     float: left;
+}
+
+p{
+    color:#808080;
 }

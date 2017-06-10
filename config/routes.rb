@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
+  devise_for :users
+  root 'questions#index'
+
   #Questions
   #Create
   get '/questions/new' => 'questions#new'
   post '/questions/create' => 'questions#create'
   
   #Read
-  root 'questions#index'
+  
   get '/questions/show/:question_id' => 'questions#show'
 
   #Update

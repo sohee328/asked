@@ -3,30 +3,31 @@
         
     </head>
     
-    <body style = "background-image: url(https://68.media.tumblr.com/97502823fc5310b8bc11ba008cd59be5/tumblr_nmezcs5lPL1tf8vylo1_1280.png)">
+    <body>
 
-        <p><h2><%= @question.id%>번 질문입니다.</h1></p>
+        <p><h2 style="color:#FFFF00"><%= @question.id%>번 글입니다.</h1></p>
 
-        <h4>이름: <%= @question.title %></h4>
+        <h4 style="color:#808080">작성자: <%= @question.title %></h4>
 
-        <h4>질문: <%= @question.content %></h4>
+        <h4 style="color:#808080">내용: <%= @question.content %></h4>
         <hr>
-        <h4>댓글</h4>
+        <h4 style="color:#808080">댓글</h4>
         <form action='/questions/show/<%= @question.id%>/comments/create' method = POST>
             <input type = 'text' class="form-control" name='input_comment'><br>
-            <center><button type="submit" class="btn btn-outline-danger">댓글입력</button></center>
+            <center><button type="submit" class="btn btn-outline-warning">댓글입력</button></center>
         </form>
         <hr>
-        댓글 목록
+        
+        <p>댓글 목록</p>
         <%@comments.each do |comment| %>
             <p>
                 -> <%= comment.content %> <a href='/questions/show/<%=@question.id %>/comments/delete/<%= comment.id %>' data-method="post">
-                    <button type="button" class="btn btn-info">삭제</button></a>
+                    <button type="button" class="btn btn-outline-info">삭제</button></a>
             </p>
         <% end %>
         <hr>
-        <center><h5><a href="/questions/delete/<%=@question.id %>" data-method="post"><button type="button" class="btn btn-outline-danger">삭제</a></button>  <a href="/questions/edit/<%=@question.id %>"><button type="button" class="btn btn-outline-danger">수정</a></h5></center>
-        <center><h5><a href="/"><button type="button" class="btn btn-info">목록으로 가기</button></a></h5></center>
+        <center><h5><a href="/questions/delete/<%=@question.id %>" data-method="post"><button type="button" class="btn btn-outline-warning">삭제</a></button>  <a href="/questions/edit/<%=@question.id %>"><button type="button" class="btn btn-outline-warning">수정</a></h5></center>
+        <center><h5><a href="/"><button type="button" class="btn btn-warning">목록으로 가기</button></a></h5></center>
     </body>
     
 </html>
